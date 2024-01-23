@@ -38,9 +38,6 @@ public class index {
                 case 4:
                     transaksi();
                     break;
-                case 5:
-                    absensi();
-                    break; 
                 case 0:
                     System.out.println("Keluar dari program.");
                     break;
@@ -852,5 +849,6 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
     System.out.println("Tekan Enter untuk kembali ke menu.");
     scanner.nextLine();
        
-    }  
+    }
+  
 }
