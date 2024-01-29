@@ -7,23 +7,22 @@
 ## Kelompok
 <ul>
   <li>Kelompok: 12</li>
-  <li>Proyek: </li>
+  <li>Proyek: Sistem kursus</li>
   <li>Anggota:</li>
   <ul>
-    <li>Ketua: <a href="">Ketua</a></li>
-    <li>Anggota 1: <a href="">Anggota 1</a></li>
-    <li>Anggota 2: <a href="">Anggota 2</a></li>
+    <li>Ketua: <a href="https://github.com/akbardarmawan">Akbar Darmawan 23552012005</a></li>
+    <li>Anggota 1: <a href="">Anggota 1</a>Sri Lestari 23552011426</li>
   </ul>
 </ul>
 
 ## Judul Proyek
-<p>Lorem ipsum sir dolor amet.</p>
+<p>Sistem Input Data Kursus</p>
 
 ## Penjelasan Proyek
-<p>Lorem ipsum sir dolor amet.</p>
+<p>Proyek ini berupa Sistem input data kursus dimulai dari peserta kursus, pelajaran, jadwal dan transaksi</p>
 
 ## Komponen Proyek
-<p>Lorem ipsum sir dolor amet.</p>
+<p></p>
 
 ## Pembagian Tim
 <p>Lorem ipsum sir dolor amet.</p>
