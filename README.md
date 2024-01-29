@@ -19,7 +19,8 @@
 <p>Sistem Input Data Kursus</p>
 
 ## Penjelasan Proyek
-<p>Proyek ini berupa Sistem input data kursus dimulai dari peserta kursus, pelajaran, jadwal dan transaksi</p>
+<p>Proyek ini berupa Sistem CRUD data kursus dimulai dari peserta kursus, pelajaran, jadwal dan transaksi. didalam sistem ini pengguna dapat melakukan tugas yang simple yaitu melakukan proses 
+pembuatan data, edit data, melihat data dan mendelete data</p>
 
 ## Komponen Proyek
 <p></p>
