@@ -1,12 +1,35 @@
-# Tugas Besar Struktur Data
+# Final Proyek Struktur Data
+<ul>
+  <li>Mata Kuliah: Struktur Data</li>
+  <li>Dosen Pengampu: <a href="https://github.com/Muhammad-Ikhwan-Fathulloh">Muhammad Ikhwan Fathulloh</a></li>
+</ul>
 
-Tugas Besar Struktur Data ini di susun oleh
+## Kelompok
+<ul>
+  <li>Kelompok: 12</li>
+  <li>Proyek: </li>
+  <li>Anggota:</li>
+  <ul>
+    <li>Ketua: <a href="">Ketua</a></li>
+    <li>Anggota 1: <a href="">Anggota 1</a></li>
+    <li>Anggota 2: <a href="">Anggota 2</a></li>
+  </ul>
+</ul>
 
-Akbar Darmawan 23552012005
+## Judul Proyek
+<p>Lorem ipsum sir dolor amet.</p>
 
-Sri Lestari 23552011426
+## Penjelasan Proyek
+<p>Lorem ipsum sir dolor amet.</p>
 
+## Komponen Proyek
+<p>Lorem ipsum sir dolor amet.</p>
 
-## Source Code
+## Pembagian Tim
+<p>Lorem ipsum sir dolor amet.</p>
 
-https://github.com/akbardarmawan/tubes/blob/main/index.java
+## Demo Proyek
+<ul>
+  <li>Github: <a href="">Github</a></li>
+  <li>Youtube: <a href="">Youtube</a></li>
+</ul>
