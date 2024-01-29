@@ -23,7 +23,7 @@
 pembuatan data, edit data, melihat data dan mendelete data</p>
 
 ## Komponen Proyek
-<p></p>
+<p>Pembagian </p>
 
 ## Pembagian Tim
 <p>Lorem ipsum sir dolor amet.</p>
