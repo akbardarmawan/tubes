@@ -11,7 +11,7 @@
   <li>Anggota:</li>
   <ul>
     <li>Ketua: <a href="https://github.com/akbardarmawan">Akbar Darmawan 23552012005</a></li>
-    <li>Anggota 1: <a href="">Anggota 1</a>Sri Lestari 23552011426</li>
+    <li>Anggota 1: <a href="">Sri Lestari 23552011426</a></li>
   </ul>
 </ul>
 
