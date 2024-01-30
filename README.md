@@ -23,10 +23,18 @@
 pembuatan data, edit data, melihat data dan mendelete data</p>
 
 ## Komponen Proyek
-<p>Pembagian </p>
+<p>Proyek ini mengimplementasikan 5 metode struktur data berikut </p>
+
 
 ## Pembagian Tim
-<p>Lorem ipsum sir dolor amet.</p>
+<p>Akbar Darmawan mengerjakan:</p>
+<p>1. Fungsi Menu</p>
+<p>2. Fungsi Peserta</p>
+<p>3. Fungsi Transaksi</p>
+<p></p>
+<p>Sri Lestari mengerjakan:</p>
+<p>1. Fungsi Jadwal</p>
+<p>2. Fungsi Transaksi</p>
 
 ## Demo Proyek
 <ul>
