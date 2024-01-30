@@ -43,6 +43,6 @@ pembuatan data, edit data, melihat data dan mendelete data</p>
 
 ## Demo Proyek
 <ul>
-  <li>Github: <a href="">Github</a></li>
+  <li>Github: <a href="https://github.com/akbardarmawan/tubes/blob/main/index.java">Github</a></li>
   <li>Youtube: <a href="">Youtube</a></li>
 </ul>
