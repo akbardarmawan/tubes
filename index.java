@@ -19,7 +19,6 @@ public class index {
             System.out.println("2. Pelajaran");
             System.out.println("3. Jadwal");
             System.out.println("4. Transaksi");
-            System.out.println("5. Absensi Kursus");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu (0-5): ");
             choice = scanner.nextInt();
