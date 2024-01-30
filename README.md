@@ -23,12 +23,12 @@
 pembuatan data, edit data, melihat data dan mendelete data</p>
 
 ## Komponen Proyek
-<p>Proyek ini mengimplementasikan 5 metode struktur data berikut
-1. Searching
-2. Sorting
-3. Record
-4. Array
-5. Linked List</p>
+<p>Proyek ini mengimplementasikan 5 metode struktur data berikut</p>
+<p>1. Searching</p>
+<p>2. Sorting</p>
+<p>3. Record</p>
+<p>4. Array</p>
+<p>5. Linked List</p>
 
 
 ## Pembagian Tim
