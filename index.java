@@ -1,10 +1,8 @@
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Scanner;
-import java.util.Stack;
-import java.util.PriorityQueue;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class index {
@@ -15,10 +13,13 @@ public class index {
     public static void main(String[] args) {
         int choice;
         do {
+            System.out.println("      Menu         ");
+            System.out.println("==================");
             System.out.println("1. Peserta");
             System.out.println("2. Pelajaran");
             System.out.println("3. Jadwal");
             System.out.println("4. Transaksi");
+            System.out.println("5. Pilih Jadwal");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu (0-5): ");
             choice = scanner.nextInt();
@@ -37,6 +38,8 @@ public class index {
                 case 4:
                     transaksi();
                     break;
+                case 5:
+                    pilihJadwal();
                 case 0:
                     System.out.println("Keluar dari program.");
                     break;
@@ -56,6 +59,8 @@ public class index {
     private static void peserta() {
         int choice;
         do {
+            System.out.println("   Menu Peserta         ");
+            System.out.println("=====================");
             System.out.println("1. Tambah Peserta");
             System.out.println("2. List Peserta");
             System.out.println("3. Edit Data Peserta");
@@ -274,6 +279,8 @@ public class index {
     private static void pelajaran() {
         int choice;
         do {
+            System.out.println("   Menu Pelajaran         ");
+            System.out.println("========================");
             System.out.println("1. Tambah Pelajaran");
             System.out.println("2. List Pelajaran");
             System.out.println("3. Edit Data Pelajaran");
@@ -492,6 +499,8 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
     private static void jadwal() {
         int choice;
         do {
+            System.out.println("     Menu Jadwal         ");
+            System.out.println("=====================");
             System.out.println("1. Tambah Jadwal");
             System.out.println("2. List Jadwal");
             System.out.println("3. Edit Data Jadwal");
@@ -705,6 +714,8 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
     private static void transaksi() {
         int choice;
         do {
+            System.out.println("   Menu Transaksi         ");
+            System.out.println("=====================");
             System.out.println("1. Buat Transaksi");
             System.out.println("2. List Transaksi");
             System.out.println("3. Hapus Transaksi");
@@ -849,5 +860,170 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
     scanner.nextLine();
        
     }
-  
+
+
+    //menu pilih jadwal
+    private static List<Selection> selectedChoicesList = new LinkedList<>();
+    private static void pilihJadwal() {
+        int choice;
+        do {
+            System.out.println("   Menu Jadwal         ");
+            System.out.println("=====================");
+            System.out.println("1. Pilih Jadwal Kelas");
+            System.out.println("2. Lihat Jadwal Kelas");
+            System.out.println("3. Hapus Jadwal Kelas");
+            System.out.println("0. Keluar");
+            System.out.print("Pilih menu (0-5): ");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // Membuang karakter newline setelah memasukkan angka
+
+            switch (choice) {
+                case 1:
+                    pilihKelas();
+                    break;
+                case 2:
+                    lihatKelas();
+                    break;
+                case 3:
+                    deleteKelas();
+                    break;
+                case 0:
+                    System.out.println("Keluar dari program.");
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid.");
+            }
+
+        } while (choice != 0);
+
+        scanner.close();
+    }
+
+    
+    private static void pilihKelas() {
+        if (daftarPeserta.isEmpty() && listJadwal.isEmpty() && daftarPelajaran.isEmpty()) {
+            System.out.println("Tidak ada data peserta.");
+        } else {
+            daftarPeserta.sort(Comparator.comparing(peserta1::kdPeserta));
+            System.out.println("Daftar Peserta:");
+            System.out.println("==============================");
+            for (peserta1 peserta : daftarPeserta) {
+                System.out.println("Kode Peserta: " + peserta.kdPeserta());
+                System.out.println("Nama Peserta: " + peserta.namaPeserta());
+                System.out.println("==============================");
+            }
+            for (jadwal1 jadwal : listJadwal) {
+                System.out.println("Kode Jadwal: " + jadwal.kdJadwal());
+                System.out.println("Waktu: " + jadwal.waktu());
+                System.out.println("Hari: " + jadwal.hari());
+                System.out.println("Durasi: " + jadwal.durasi());
+                System.out.println("Tempat: " + jadwal.tempat());
+                System.out.println("==============================");
+            }
+            for (pelajaran1 pelajaran : daftarPelajaran) {
+                System.out.println("Kode Pelajaran: " + pelajaran.kdPelajaran());
+                System.out.println("Nama Pelajaran: " + pelajaran.namaPelajaran());
+                System.out.println("Guru Pengajar: " + pelajaran.guruPengajar());
+                System.out.println("Ruang Pelajaran: " + pelajaran.ruangPelajaran());
+                System.out.println("==============================");
+            }
+        System.out.print("Masukkan Kode Peserta: ");
+        String kdPeserta = scanner.nextLine();
+
+        System.out.print("Masukkan Kode Jadwal: ");
+        String kdJadwal = scanner.nextLine();
+
+        System.out.print("Masukkan Kode Pelajaran: ");
+        String kdPelajaran = scanner.nextLine();
+
+        // Create an instance of Selection and add it to the linked list
+        Selection selection = new Selection(kdPeserta, kdJadwal, kdPelajaran);
+        selectedChoicesList.add(selection);
+
+        System.out.println("Pilihan berhasil disimpan.");
+        }
+    }
+    private static void lihatKelas() {
+         if (selectedChoicesList.isEmpty()) {
+        System.out.println("Belum ada pilihan kelas.");
+    } else {
+
+        for (jadwal1 jadwal : listJadwal) {
+            System.out.println("Kode Jadwal: " + jadwal.kdJadwal());
+            System.out.println("Waktu: " + jadwal.waktu());
+            System.out.println("Hari: " + jadwal.hari());
+            System.out.println("Durasi: " + jadwal.durasi());
+            System.out.println("Tempat: " + jadwal.tempat());
+            System.out.println("==============================");
+        }
+        // Sort the list based on Kode Jadwal
+        Collections.sort(selectedChoicesList, (s1, s2) -> s1.getKdJadwal().compareTo(s2.getKdJadwal()));
+        System.out.println("Daftar Pilihan (Sorted by Kode Jadwal):");
+        for (Selection selection : selectedChoicesList) {
+            System.out.println("Kode Peserta: " + selection.getKdPeserta());
+            System.out.println("Kode Jadwal: " + selection.getKdJadwal());
+            System.out.println("Kode Pelajaran: " + selection.getKdPelajaran());
+            System.out.println("==============================");
+        }       
+    }
+       
+    }
+
+    private static void deleteKelas() {
+        if (selectedChoicesList.isEmpty()) {
+            System.out.println("Belum ada pilihan kelas untuk dihapus.");
+            return;
+        }
+        Collections.sort(selectedChoicesList, (s1, s2) -> s1.getKdJadwal().compareTo(s2.getKdJadwal()));
+        System.out.println("Daftar Pilihan (Sorted by Kode Jadwal):");
+        for (Selection selection : selectedChoicesList) {
+            System.out.println("Kode Peserta: " + selection.getKdPeserta());
+            System.out.println("Kode Jadwal: " + selection.getKdJadwal());
+            System.out.println("Kode Pelajaran: " + selection.getKdPelajaran());
+            System.out.println("==============================");
+        }     
+    
+        System.out.println("Masukkan Kode Peserta untuk menghapus pilihan kelas: ");
+        String kdPesertaToDelete = scanner.nextLine();
+    
+        System.out.println("Masukkan Kode Jadwal untuk menghapus pilihan kelas: ");
+        String kdJadwalToDelete = scanner.nextLine();
+    
+        System.out.println("Masukkan Kode Pelajaran untuk menghapus pilihan kelas: ");
+        String kdPelajaranToDelete = scanner.nextLine();
+    
+        // Create a dummy Selection with the specified kdPeserta, kdJadwal, and kdPelajaran
+        Selection selectionToDelete = new Selection(kdPesertaToDelete, kdJadwalToDelete, kdPelajaranToDelete);
+    
+        // Check if the selection exists in the list and remove it
+        if (selectedChoicesList.remove(selectionToDelete)) {
+            System.out.println("Pilihan kelas berhasil dihapus.");
+        } else {
+            System.out.println("Pilihan kelas tidak ditemukan.");
+        }   
+       
+    } 
+}
+class Selection {
+    private String kdPeserta;
+    private String kdJadwal;
+    private String kdPelajaran;
+
+    public Selection(String kdPeserta, String kdJadwal, String kdPelajaran) {
+        this.kdPeserta = kdPeserta;
+        this.kdJadwal = kdJadwal;
+        this.kdPelajaran = kdPelajaran;
+    }
+
+    public String getKdPeserta() {
+        return kdPeserta;
+    }
+
+    public String getKdJadwal() {
+        return kdJadwal;
+    }
+
+    public String getKdPelajaran() {
+        return kdPelajaran;
+    }
 }
