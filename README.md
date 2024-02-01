@@ -19,11 +19,10 @@
 <p>Sistem Input Data Kursus</p>
 
 ## Penjelasan Proyek
-<p>Proyek ini berupa Sistem CRUD data kursus dimulai dari peserta kursus, pelajaran, jadwal dan transaksi. didalam sistem ini pengguna dapat melakukan tugas yang simple yaitu melakukan proses 
-pembuatan data, edit data, melihat data dan mendelete data</p>
+<p>Proyek ini berupa Sistem CRUD data kursus dimulai dari peserta kursus, pelajaran, jadwal dan transaksi. didalam sistem ini pengguna dapat melakukan tugas yang simple yaitu melakukan proses pembuatan data, edit data, melihat data dan mendelete data.</p>
 
 ## Komponen Proyek
-<p>Proyek ini mengimplementasikan 5 metode struktur data berikut</p>
+<p>Proyek ini mengimplementasikan 5 metode struktur data berikut.</p>
 <p>1. Searching</p>
 <p>2. Sorting</p>
 <p>3. Record</p>
@@ -32,12 +31,12 @@ pembuatan data, edit data, melihat data dan mendelete data</p>
 
 
 ## Pembagian Tim
-<p>Akbar Darmawan mengerjakan:</p>
+<p>Akbar Darmawan mengerjakan :</p>
 <p>1. Fungsi Menu</p>
 <p>2. Fungsi Peserta</p>
 <p>3. Fungsi Transaksi</p>
 <p>4. Pilih Jadwal</p>
-<p>Sri Lestari mengerjakan:</p>
+<p>Sri Lestari mengerjakan :</p>
 <p>1. Fungsi Jadwal</p>
 <p>2. Fungsi Transaksi</p>
 
