@@ -219,7 +219,7 @@ public class index {
         System.out.println("Tidak ada data peserta.");
     } else {
         daftarPeserta.sort(Comparator.comparing(peserta1::kdPeserta));
-        System.out.println("Daftar Peserta:");
+        System.out.println("Data Peserta:");
         System.out.println("==============================");
 
         for (peserta1 peserta : daftarPeserta) {
@@ -375,9 +375,8 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
             System.out.println("Tidak ada data pelajaran.");
             
         } else {
-            System.out.print("Masukkan kode pelajaran yang akan diedit: ");
             daftarPelajaran.sort(Comparator.comparing(pelajaran1::kdPelajaran));
-            System.out.println("Daftar Pelajaran:");
+            System.out.println("Data Pelajaran:");
             System.out.println("==============================");
             for (pelajaran1 pelajaran : daftarPelajaran) {
                 System.out.println("Kode Pelajaran: " + pelajaran.kdPelajaran());
@@ -385,7 +384,9 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
                 System.out.println("Guru Pengajar: " + pelajaran.guruPengajar());
                 System.out.println("Ruang Pelajaran: " + pelajaran.ruangPelajaran());
                 System.out.println("==============================");
+
             }
+            System.out.println("Masukkan Kode Peserta yang akan di edit");
             String targetKdPelajaran = scanner.nextLine();
         
             boolean found = false;
@@ -402,7 +403,7 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
                     System.out.println("Ruang Pelajaran: " + pelajaran.ruangPelajaran());
                     System.out.println("==============================");
         
-                    System.out.print("Masukkan nama baru: ");
+                    System.out.print("Masukkan nama pelajaran baru: ");
                     String newNamaPelajaran = scanner.nextLine();
                     System.out.print("Masukkan guru pengajar baru: ");
                     String newGuruPengajar = scanner.nextLine();
@@ -616,8 +617,8 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
                 System.out.println("Tempat: " + jadwal.tempat());
                 System.out.println("==============================");
 
-                System.out.print("Masukkan Tanggal Jadwal baru: ");
-                String newTanggalJadwal = scanner.nextLine();
+                System.out.print("Masukkan Waktu Baru: ");
+                String newWaktu = scanner.nextLine();
                 System.out.print("Masukkan Hari baru: ");
                 String newHari = scanner.nextLine();
                 System.out.print("Masukkan Durasi baru: ");
@@ -626,7 +627,7 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
                 String newTempat = scanner.nextLine();
 
                 // Buat objek baru dengan data yang sudah diubah
-                jadwal1 editedJadwal = new jadwal1(targetKodeJadwal, newTanggalJadwal, newHari, newDurasi, newTempat);
+                jadwal1 editedJadwal = new jadwal1(targetKodeJadwal, newWaktu, newHari, newDurasi, newTempat);
 
                 // Ganti data lama dengan data baru di listJadwal
                 listJadwal.set(listJadwal.indexOf(jadwal), editedJadwal);
@@ -734,7 +735,6 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
                 case 3:
                     deleteTransaksi();
                     break;
-
                 case 0:
                     index.main(null);
                     break;
@@ -876,7 +876,6 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
             System.out.print("Pilih menu (0-5): ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Membuang karakter newline setelah memasukkan angka
-
             switch (choice) {
                 case 1:
                     pilihKelas();
@@ -888,7 +887,7 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
                     deleteKelas();
                     break;
                 case 0:
-                    System.out.println("Keluar dari program.");
+                    index.main(null);
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");
@@ -897,6 +896,7 @@ System.out.println("Data Pelajaran berhasil ditambahkan!");
         } while (choice != 0);
 
         scanner.close();
+            
     }
 
     
