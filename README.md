@@ -43,5 +43,5 @@
 ## Demo Proyek
 <ul>
   <li>Github: <a href="https://github.com/akbardarmawan/tubes/blob/main/index.java">Github</a></li>
-  <li>Youtube: <a href="">Youtube</a></li>
+  <li>Youtube: <a href="https://youtu.be/Lqcmwk8QM48">Youtube</a></li>
 </ul>
