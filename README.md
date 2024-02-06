@@ -39,6 +39,7 @@
 <p>Sri Lestari mengerjakan :</p>
 <p>1. Fungsi Jadwal</p>
 <p>2. Fungsi Transaksi</p>
+<p>3. Menentukan data/tipe data</p>
 
 ## Demo Proyek
 <ul>
