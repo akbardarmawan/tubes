@@ -42,6 +42,7 @@
 <p>Yang Dilakukan bersama</p>
 <p>1. Menentukan Tipe Data</p>
 <p>2. Menentukan Implementasi Metode Struktur Data</p>
+
 ## Demo Proyek
 <ul>
   <li>Github: <a href="https://github.com/akbardarmawan/tubes/blob/main/index.java">Github</a></li>
